@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server  --contentBase src  --port 3333 --open --hot"
+    "dev": "webpack-dev-server  --contentBase src  --port 5555 --open --hot"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,8 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
     "mint-ui": "^2.2.13",
+    "moment": "^2.22.2",
+    "vant": "^1.4.5",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.0.1",
     "webpack": "^4.26.0",

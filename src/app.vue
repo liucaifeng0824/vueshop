@@ -37,5 +37,6 @@
 <style scoped>
     .contains-app{
         margin-top: 40px;
+		padding-bottom: 50px;
     }
 </style>

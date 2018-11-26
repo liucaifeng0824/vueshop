@@ -6,6 +6,10 @@ import member from './components/tabbar/member.vue';
 import search from './components/tabbar/search.vue';
 import shopcar from './components/tabbar/shopcar.vue';
 import newslist from './components/news/newslist.vue';
+import newsarticle from './components/news/newsarticle.vue';
+import imglist from './components/images/imglist.vue';
+import imginfo from './components/images/imginfo.vue';
+
 //定义路由
 var router=new VueRouter({
     routes: [
@@ -15,6 +19,9 @@ var router=new VueRouter({
         {path:'/search',component:search},
         {path:'/shopcar',component:shopcar},
         {path:'/home/newslist',component:newslist},
+        {path:'/home/newsarticle/:id',component:newsarticle},
+        {path:'/home/imglist',component:imglist},
+        {path:'/home/imginfo/:id',component:imginfo},  
 ],
 'linkActiveClass':'mui-active'
 });
