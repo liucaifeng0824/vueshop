@@ -29,8 +29,10 @@
 </template>
 
 <script>
-import { Toast } from 'mint-ui';
-import comment from '../common/comment.vue';
+    import {
+        Toast
+    } from 'mint-ui';
+    import comment from '../common/comment.vue';
     export default {
         data() {
             return {
@@ -44,10 +46,10 @@ import comment from '../common/comment.vue';
         },
         created() {
             this.getarticle();
-            this.getcomments();
+            // this.getcomments();
         },
         methods: {
-           
+
             getarticle() {
                 this.$http.get('api/getnew/' + this.id).then(function (res) {
                     if (res.body.status == 0) {
@@ -77,7 +79,7 @@ import comment from '../common/comment.vue';
             //                    this.comments = this.comments.concat(res.body.message);
             //                })
             //             }    
-                      
+
             //         }
             //            this.comment='';       
             //             Toast('添加评论成功');
@@ -98,7 +100,7 @@ import comment from '../common/comment.vue';
             //     })
             // }
         },
-        components:{
+        components: {
             comment
         }
     }
@@ -152,11 +154,15 @@ import comment from '../common/comment.vue';
 
             }
 
-        //     .content {
-        //         font-size: 14px;
-        //         padding: 6px 10px;
-        //     }
-         }
+            //     .content {
+            //         font-size: 14px;
+            //         padding: 6px 10px;
+            //     }
+        }
+
+        /deep/ img {
+            width: 100%;
+        }
 
         .mint-ui {
             border-color: rgb(75, 12, 12);

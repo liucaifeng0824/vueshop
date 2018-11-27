@@ -9,6 +9,10 @@ import newslist from './components/news/newslist.vue';
 import newsarticle from './components/news/newsarticle.vue';
 import imglist from './components/images/imglist.vue';
 import imginfo from './components/images/imginfo.vue';
+import goodsbuy from './components/goods/goodsbuy.vue';
+import goodsinfo from './components/goods/goodsinfo.vue';
+import goodsdesc from './components/goods/goodsdesc.vue';
+
 
 //定义路由
 var router=new VueRouter({
@@ -21,7 +25,11 @@ var router=new VueRouter({
         {path:'/home/newslist',component:newslist},
         {path:'/home/newsarticle/:id',component:newsarticle},
         {path:'/home/imglist',component:imglist},
-        {path:'/home/imginfo/:id',component:imginfo},  
+        {path:'/home/imginfo/:id',component:imginfo},
+        {path:'/home/goodsbuy',component:goodsbuy}, 
+        {path:'/home/goodsinfo/:id',component:goodsinfo}, 
+        {path:'/home/goodsdesc/:id',component:goodsdesc}, 
+        
 ],
 'linkActiveClass':'mui-active'
 });

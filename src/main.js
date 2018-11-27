@@ -61,7 +61,9 @@ Vue.use(Tab).use(Tabs);
 import mit from './lib/mui/css/mui.min.css';
 import './lib/mui/css/icons-extra.css';
 
-
+//导入图片详情图片预览
+import VuePreview from 'vue-preview';
+Vue.use(VuePreview);
 
 new Vue({
     el:"#app",

@@ -1,8 +1,9 @@
 <template>
     <div class="home-compains">
-        <mt-swipe :auto="4000">
+        <!-- <mt-swipe :auto="4000">
             <mt-swipe-item v-for="item in lunbo" :key="item.img"><img :src="item.img" alt=""></mt-swipe-item>
-        </mt-swipe>
+        </mt-swipe> -->
+        <swipe :lunbo='lunbo'></swipe>
         <ul class="mui-table-view mui-grid-view mui-grid-9">
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
                 <router-link to="/home/newslist">
@@ -14,10 +15,11 @@
                     <img src="../../images/menu2.png" alt="">
                     <div class="mui-media-body">图片分享</div>
                 </router-link></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <router-link to="/home/goodsbuy">
                     <img src="../../images/menu3.png" alt="">
                     <div class="mui-media-body">商品购买</div>
-                </a></li>
+                </router-link></li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
                     <img src="../../images/menu4.png" alt="">
                     <div class="mui-media-body">留言反馈</div>
@@ -36,12 +38,16 @@
 </template>
 
 <script>
+//导入轮播图公共
+import swipe from '../common/swipe.vue';
     export default {
         data() {
             return {
-                lunbo: ""
+                lunbo: []
             }
         },
+
+        
         created() {
             //当前组件实例的时候自动执行该方法
             this.getlunbo();
@@ -55,19 +61,16 @@
                     }
                 });
             }
+        } ,components:{
+            swipe
         }
+       
     }
 </script>
 
 <style lang="scss" scoped>
     .home-compains {
-        .mint-swipe {
-            height: 200px;
-            background-color: #ccc;
-            img {
-                width: 100%;
-            }
-        }
+        
         .mui-table-view{
             img{
                 width: 50%;
