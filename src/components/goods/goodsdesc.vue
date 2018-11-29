@@ -35,5 +35,6 @@
 <style lang="scss" scoped>
 /deep/ img{
         width: 100%;
+
 }
 </style>

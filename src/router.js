@@ -12,6 +12,8 @@ import imginfo from './components/images/imginfo.vue';
 import goodsbuy from './components/goods/goodsbuy.vue';
 import goodsinfo from './components/goods/goodsinfo.vue';
 import goodsdesc from './components/goods/goodsdesc.vue';
+import goodscomment from './components/goods/goodscomment.vue';
+
 
 
 //定义路由
@@ -29,6 +31,8 @@ var router=new VueRouter({
         {path:'/home/goodsbuy',component:goodsbuy}, 
         {path:'/home/goodsinfo/:id',component:goodsinfo}, 
         {path:'/home/goodsdesc/:id',component:goodsdesc}, 
+        {path:'/home/goodscomment/:id',component:goodscomment}, 
+
         
 ],
 'linkActiveClass':'mui-active'
